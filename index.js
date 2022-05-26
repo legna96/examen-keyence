@@ -6,7 +6,7 @@ app.use(express.static('public'));
 app.use('/', require('./routes/pages'));
 
 function main() {
-    app.listen(process.env.PORT, () => {
+    app.listen(process.env.PORT || 3000, () => {
         console.log(`server on port ${process.env.PORT}`);
     })
 }
